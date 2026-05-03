@@ -9,6 +9,7 @@ Run end-to-end local pipeline:
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import subprocess
 import sys
 from pathlib import Path
@@ -30,6 +31,8 @@ def main() -> None:
     parser.add_argument("--min-fit-score", type=int, default=3)
     parser.add_argument("--top-n", type=int, default=40)
     parser.add_argument("--min-priority", default="medium")
+    parser.add_argument("--digest-top-n", type=int, default=20)
+    parser.add_argument("--digest-min-competitive-score", type=int, default=14)
     args = parser.parse_args()
 
     outdir = Path(args.outdir)
@@ -37,6 +40,9 @@ def main() -> None:
 
     discovered = str(outdir / "discovered_jobs.csv")
     targets = str(outdir / "auto_targets.csv")
+    digest_txt = str(outdir / "daily_digest.txt")
+    digest_html = str(outdir / "daily_digest.html")
+    date_label = dt.datetime.now(dt.UTC).strftime("%Y-%m-%d UTC")
 
     py = sys.executable
     run(
@@ -79,6 +85,24 @@ def main() -> None:
             targets,
             "--outdir",
             args.outdir,
+        ]
+    )
+    run(
+        [
+            py,
+            "JobSearchAutomation/generate_daily_digest.py",
+            "--input",
+            discovered,
+            "--text-output",
+            digest_txt,
+            "--html-output",
+            digest_html,
+            "--top-n",
+            str(args.digest_top_n),
+            "--min-competitive-score",
+            str(args.digest_min_competitive_score),
+            "--date-label",
+            date_label,
         ]
     )
     print(f"Pipeline complete. Review outputs in {outdir}")

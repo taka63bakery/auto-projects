@@ -27,7 +27,24 @@ jobs:
             --location-mode remote_us_canada_hybrid \
             --min-fit-score 4 \
             --top-n 50 \
-            --min-priority medium
+            --min-priority medium \
+            --digest-top-n 20 \
+            --digest-min-competitive-score 14
+
+      - name: Send daily email digest
+        if: ${{ secrets.SMTP_SERVER != '' && secrets.SMTP_USERNAME != '' && secrets.SMTP_PASSWORD != '' }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT || '587' }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          secure: false
+          subject: Daily AI job digest (competitive-fit)
+          to: kageishota@gmail.com
+          from: ${{ secrets.EMAIL_FROM || 'kageishota@gmail.com' }}
+          html_body: file://JobSearchAutomation/output/daily_digest.html
+          body: file://JobSearchAutomation/output/daily_digest.txt
 
       - name: Upload outputs
         uses: actions/upload-artifact@v4
@@ -39,3 +56,5 @@ jobs:
             JobSearchAutomation/output/outreach_drafts.csv
             JobSearchAutomation/output/outreach_drafts.md
             JobSearchAutomation/output/application_tracker.csv
+            JobSearchAutomation/output/daily_digest.txt
+            JobSearchAutomation/output/daily_digest.html

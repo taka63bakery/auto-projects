@@ -77,6 +77,8 @@ This repo now includes a GitHub Actions workflow:
 What it does:
 - runs daily (and manually on demand)
 - executes the full pipeline
+- generates a competitive-fit daily digest
+- emails the digest to `kageishota@gmail.com` (if SMTP secrets are configured)
 - uploads outputs as an artifact called `job-search-output`
 
 How to use:
@@ -84,6 +86,20 @@ How to use:
 2. Open GitHub `Actions` tab.
 3. Run `Job Search Pipeline` manually once to validate.
 4. Download `job-search-output` artifact from each run.
+
+### Email Setup (Required Once)
+
+In GitHub repo settings, add these Actions secrets:
+- `SMTP_SERVER` (example: `smtp.gmail.com`)
+- `SMTP_PORT` (usually `587`)
+- `SMTP_USERNAME` (your sending email)
+- `SMTP_PASSWORD` (app password or SMTP password)
+- `EMAIL_FROM` (optional sender address; defaults to `kageishota@gmail.com`)
+
+For Gmail:
+- enable 2FA on the sender account
+- create an App Password
+- use that app password as `SMTP_PASSWORD`
 
 ## Recommended Usage Model
 

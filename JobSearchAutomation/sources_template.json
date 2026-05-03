@@ -1,0 +1,56 @@
+{
+  "greenhouse_boards": [
+    "future",
+    "humanagency",
+    "anthropic",
+    "cloudflare",
+    "scaleai"
+  ],
+  "lever_sites": [
+    "knownwell",
+    "mistral"
+  ],
+  "include_terms": [
+    "ai",
+    "agent",
+    "agentic",
+    "llm",
+    "automation",
+    "orchestration",
+    "pipeline",
+    "trust and safety",
+    "security",
+    "intelligence"
+  ],
+  "include_title_terms": [
+    "ai",
+    "applied",
+    "machine learning",
+    "ml",
+    "agent",
+    "automation",
+    "intelligence",
+    "threat",
+    "trust",
+    "safety",
+    "security",
+    "platform engineer"
+  ],
+  "exclude_title_terms": [
+    "chief",
+    "ciso",
+    "principal scientist",
+    "director",
+    "vp",
+    "vice president",
+    "counsel",
+    "legal",
+    "intern",
+    "fellows program",
+    "sales",
+    "finance",
+    "marketing"
+  ]
+  ,
+  "max_per_company": 20
+}

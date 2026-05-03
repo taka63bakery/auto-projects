@@ -1,0 +1,11 @@
+# Local/private inputs and large local tooling
+SK_Inputs/
+Office-Word-MCP-Server/
+Outputs/
+
+# Generated outputs
+JobSearchAutomation/output/
+
+# Python cache
+__pycache__/
+*.pyc

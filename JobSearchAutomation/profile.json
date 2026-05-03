@@ -1,0 +1,104 @@
+{
+  "name": "Shota Kagei",
+  "headline": "Applied AI Builder | Protective Intelligence, Threat Assessment, and Automation Systems",
+  "email": "kageishota@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/your-profile",
+  "skill_keywords": {
+    "agent_systems": [
+      "agent",
+      "agentic",
+      "workflow orchestration",
+      "tool calling",
+      "langchain",
+      "langgraph",
+      "multi-step"
+    ],
+    "production_ai": [
+      "production",
+      "reliability",
+      "latency",
+      "observability",
+      "monitoring",
+      "evaluation",
+      "eval",
+      "quality",
+      "safety"
+    ],
+    "data_pipelines": [
+      "pipeline",
+      "ingestion",
+      "classification",
+      "ranking",
+      "dedup",
+      "embeddings",
+      "vector",
+      "rag"
+    ],
+    "security_intel": [
+      "security",
+      "threat",
+      "trust",
+      "safety",
+      "risk",
+      "intelligence",
+      "incident",
+      "compliance",
+      "executive protection",
+      "osint",
+      "dark web",
+      "wavr-21",
+      "geopolitical"
+    ],
+    "automation_ops": [
+      "automation",
+      "operational",
+      "operations",
+      "ci/cd",
+      "github actions",
+      "unattended",
+      "efficiency"
+    ]
+  },
+  "evidence": [
+    {
+      "text": "Built AI automation across recurring intelligence products and reduced production time by 50-87% with zero missed executive-trip deadlines.",
+      "tags": ["automation", "production", "operations", "reliability"]
+    },
+    {
+      "text": "Designed and deployed PIMM, a full-stack media-monitoring system processing thousands of articles daily with multi-stage ML/LLM filtering and Slack routing.",
+      "tags": ["pipeline", "agent", "orchestration", "monitoring", "security", "intelligence"]
+    },
+    {
+      "text": "Built social intelligence pipeline processing 10,000+ posts per cycle with hybrid ML/LLM classification, threat indicators, and repeat-actor detection.",
+      "tags": ["pipeline", "classification", "evaluation", "risk", "intelligence"]
+    },
+    {
+      "text": "Created weighted threat scoring logic with 150+ criteria across POI/event/travel domains and embedded it into automated AI-assisted workflows.",
+      "tags": ["risk", "scoring", "automation", "agent", "safety"]
+    },
+    {
+      "text": "Owned end-to-end delivery from ingestion to reporting, including CI/CD workflows, quality checks, and stakeholder-ready outputs.",
+      "tags": ["production", "ci/cd", "workflow orchestration", "cross-functional"]
+    },
+    {
+      "text": "7+ years in protective intelligence and threat assessment across Shopify, Amazon, and Starbucks, supporting executive protection and security operations.",
+      "tags": ["security", "intelligence", "executive protection", "operations", "cross-functional"]
+    },
+    {
+      "text": "Reduced access audit time by 98% by mapping processes and automating compliance workflows, while identifying and removing unauthorized access risk.",
+      "tags": ["automation", "compliance", "operational", "risk", "security"]
+    },
+    {
+      "text": "Increased intelligence reporting output by 41% through SOP design, analyst training, and structured quality improvements in a GSOC environment.",
+      "tags": ["operations", "quality", "leadership", "intelligence", "process"]
+    },
+    {
+      "text": "Designed and implemented a weighted multi-domain risk matrix (POI, travel, event) to standardize threat scoring, protection posture, and resource allocation.",
+      "tags": ["risk", "scoring", "threat", "executive protection", "framework"]
+    },
+    {
+      "text": "Delivered tactical and strategic intelligence products during COVID-era disruption, civil unrest, and geopolitical events to support crisis decision-making.",
+      "tags": ["crisis", "geopolitical", "intelligence", "operations", "security"]
+    }
+  ]
+}

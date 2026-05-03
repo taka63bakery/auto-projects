@@ -1,0 +1,41 @@
+name: Job Search Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every day at 14:00 UTC
+    - cron: "0 14 * * *"
+
+jobs:
+  discover-and-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run pipeline
+        run: |
+          python JobSearchAutomation/run_pipeline.py \
+            --profile JobSearchAutomation/profile.json \
+            --sources JobSearchAutomation/sources_template.json \
+            --outdir JobSearchAutomation/output \
+            --location-mode remote_us_canada_hybrid \
+            --min-fit-score 4 \
+            --top-n 50 \
+            --min-priority medium
+
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-search-output
+          path: |
+            JobSearchAutomation/output/discovered_jobs.csv
+            JobSearchAutomation/output/auto_targets.csv
+            JobSearchAutomation/output/outreach_drafts.csv
+            JobSearchAutomation/output/outreach_drafts.md
+            JobSearchAutomation/output/application_tracker.csv

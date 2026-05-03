@@ -1,0 +1,5 @@
+company,role_title,job_url,location,hiring_manager,contact_channel,job_description_snippet,priority
+Future,Applied AI Engineer,http://job-boards.greenhouse.io/future/jobs/4683133005,US Remote,,email,"Build and ship AI agents with eval harnesses, orchestration, observability, and reliability optimization in production.",high
+Human Agency,Applied AI Engineer,http://job-boards.greenhouse.io/humanagency/jobs/7645002003,US/Canada Remote,,linkedin,"Architect AI-native products and agent workflows with full-stack ownership and production deployment.",high
+knownwell,AI Product Engineer Clinical Tools,https://jobs.lever.co/knownwell/263a5523-c582-42a9-a01c-36f4b1194397,US Remote,,email,"Design and iterate RAG pipelines, model evaluation, and clinician-facing AI tools with outcome ownership.",high
+Geotab,AI Agent Developer,https://careers.geotab.com/jobs/description/5080398008/,Canada Hybrid,,linkedin,"Build production AI agent skills, enterprise integrations, governance guardrails, and CI/CD support.",medium
